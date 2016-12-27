@@ -1,5 +1,17 @@
-# blur-api
 A RESTful API for D&amp;D 5e spells
+
+# API
+The API consists of two routes, `spells`, and `schools`. If you query for an entity that doesn't exist you will receive 404.
+
+## /spells/
+
+## /spells/:spellId
+
+## /schools/
+
+## /schools/:schoolId
+
+## /schools/:schoolId/spells
 
 # Dependencies
 Blur requires [Node.js](https://nodejs.org/) and is built to run on [Google Cloud Platform](https://cloud.google.com/).
