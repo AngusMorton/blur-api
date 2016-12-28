@@ -7,7 +7,6 @@ The API consists of two routes, `spells`, and `schools`. If you query for an ent
 Returns a list of `Spell` objects. eg.
 
 ```json
-drehtre
 [
     {
       "id": "acid-splash",
@@ -36,8 +35,25 @@ drehtre
 ]
 ```
 
-
 ## /spells/:spellId
+Returns the `Spell` with the `:spellId` provided, or HTTP 404 if there was no `Spell`.
+
+eg.
+
+```json
+   {
+      "id": "acid-splash",
+      "name": "Acid Splash",
+      "description": "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.\nThis spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+      "level": 0,
+      "duration": "Instantaneous",
+      "range": "60 feet",
+      "components": "V, S",
+      "school": "conjuration",
+      "casting_time": "1 action",
+      "classes": ["sorcerer", "wizard"]
+    }
+```
 
 ## /schools/
 
