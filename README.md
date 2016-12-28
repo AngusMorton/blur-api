@@ -6,6 +6,7 @@ The API consists of two routes, `spells`, and `schools`. If you query for an ent
 ## /spells/
 Returns a list of `Spell` objects. eg.
 
+GET /spells/
 ```json
 [
     {
@@ -40,6 +41,7 @@ Returns the `Spell` with the `:spellId` provided, or HTTP 404 if there was no `S
 
 eg.
 
+GET /spells/acid-splash
 ```json
    {
       "id": "acid-splash",
@@ -56,10 +58,51 @@ eg.
 ```
 
 ## /schools/
+Returns a list of schools. eg.
 
+GET /schools/
+```json
+[
+   {
+       "id":"conjuration",
+       "name":"conjuration"
+   },
+   {
+       "id":"abjuration",
+       "name":"abjuration"
+   }
+]
+```
 ## /schools/:schoolId
+Returns the `School` with the id provided. eg.
 
+GET /schools/abjuration/
+```json
+   {
+       "id":"abjuration",
+       "name":"abjuration"
+   }
+```
 ## /schools/:schoolId/spells
+Returns the list of `Spell`s in the `School` with the `schoolId` provided. eg.
+
+GET /schools/abjuration/spells
+```json
+[
+    {
+      "id": "aid",
+      "name": "Aid",
+      "description": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
+      "level": 2,
+      "duration": "8 hours",
+      "range": "30 feet",
+      "components": "V, S, M (a tiny strip of white cloth)",
+      "school": "abjuration",
+      "casting_time": "1 action",
+      "classes": ["cleric", "paladin"]
+    }
+]
+```
 
 # Dependencies
 Blur requires [Node.js](https://nodejs.org/) and is built to run on [Google Cloud Platform](https://cloud.google.com/).
