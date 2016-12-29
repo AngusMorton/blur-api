@@ -1,6 +1,14 @@
 // Bring in our dependencies
 const app = require('express')();
 const routes = require('./routes');
+YAML = require('yamljs');
+const swaggerDoc = YAML.load('./openapi.yaml');
+const swaggerTools = require('swagger-tools');
+
+swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
+  // Serve the Swagger documents and Swagger UI
+  app.use(middleware.swaggerUi());
+});
 
 //  Connect all our routes to our application
 app.use('/', routes);

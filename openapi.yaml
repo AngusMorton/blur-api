@@ -1,0 +1,91 @@
+swagger: '2.0'
+info:
+    title: 'Blur API'
+    description: 'Blur is a simple API for D&D spells'
+    version: "0.1.0"
+host: blur-api.endpoints.blur-api.cloud.goog
+consumes:
+    - application/json
+produces:
+    - application/json
+schemes:
+    - https
+paths:
+    /spells/{spell_id}:
+        get:
+            description: Returns the spell with the spell id provided.
+            operationId: getSpellForId
+            produces:
+                - application/json
+            parameters:
+                - name: spell_id
+                  in: path
+                  description: The id of the spell to return
+                  required: true
+                  type: string
+            responses:
+                200:
+                    description: List of Spells
+                    schema:
+                        type: object
+                        $ref: "#/definitions/Spell"
+                404:
+                    description: When there are no spells with the spell_id provided.
+                default:
+                    description: Unexpected error
+                    schema:
+                        $ref: "#/definitions/Error"
+    /spells:
+        get:
+            description: Returns the list of spells to the caller
+            operationId: getAllSpells
+            produces:
+                - application/json
+            responses:
+                200:
+                    description: Success
+                    schema:
+                        type: array
+                        items:
+                            $ref: "#/definitions/Spell"
+                404:
+                    description: When there are no spells with the spell_id provided.
+                default:
+                    description: Unexpected error
+                    schema:
+                        $ref: "#/definitions/Error"
+definitions:
+    Spell:
+        type: object
+        properties:
+            name:
+                type: string
+                description: Name of the spell.
+            casting_time:
+                type: string
+                description: How long it takes for the spell to be cast.
+            components:
+                type: string
+                description: What is required to cast the spell.
+            description:
+                type: string
+                description: English description of the spell.
+            duration:
+                type: string
+                description: How long the spell lasts.
+            level:
+                type: integer
+                description: Level required to be able to learn the spell.
+            range:
+                type: string
+                description: Range of the spell. 
+            school:
+                type: string
+                description: School of magic that the spell belongs to.
+    Error:
+        type: object
+        properties:
+            message:
+                type: string
+            fields:
+                type: string
