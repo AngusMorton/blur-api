@@ -3,7 +3,6 @@ info:
     title: 'Blur API'
     description: 'Blur is a simple API for D&D spells'
     version: "0.1.0"
-host: blur-api.endpoints.blur-api.cloud.goog
 consumes:
     - application/json
 produces:
