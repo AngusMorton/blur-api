@@ -1516,35 +1516,69 @@
   "schools": [
     {
       "id": "conjuration",
-      "name": "conjuration"
+      "name": "Conjuration"
     },
     {
       "id": "abjuration",
-      "name": "abjuration"
+      "name": "Abjuration"
     },
     {
       "id": "divination",
-      "name": "divination"
+      "name": "Divination"
     },
     {
       "id": "necromancy",
-      "name": "necromancy"
+      "name": "Necromancy"
     },
     {
       "id": "evocation",
-      "name": "evocation"
+      "name": "Evocation"
     },
     {
       "id": "enchantment",
-      "name": "enchantment"
+      "name": "Enchantment"
     },
     {
       "id": "illusion",
-      "name": "illusion"
+      "name": "Illusion"
     },
     {
       "id": "transmutation",
-      "name": "transmutation"
+      "name": "Transmutation"
+    }
+  ],
+  "classes": [
+    {
+      "id": "warlock",
+      "name": "Warlock"
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger"
+    },
+    {
+      "id": "druid",
+      "name": "Druid"
+    },
+    {
+      "id": "bard",
+      "name": "Bard"
+    },
+    {
+      "id": "sorcerer",
+      "name": "Sorcerer"
+    },
+    {
+      "id": "wizard",
+      "name": "Wizard"
+    },
+    {
+      "id": "cleric",
+      "name": "Cleric"
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin"
     }
   ]
 }
