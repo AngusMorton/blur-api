@@ -105,7 +105,7 @@ GET /schools/abjuration/spells
 ```
 
 # Dependencies
-Blur requires [Node.js](https://nodejs.org/) and is built to run on [Google Cloud Platform](https://cloud.google.com/).
+Blur requires [Node.js](https://nodejs.org/).
 
 # Setup
 Clone the project then run `npm install` in the root directory.
