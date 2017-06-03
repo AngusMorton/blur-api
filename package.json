@@ -12,6 +12,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.14.0",
+    "fuse.js": "^3.0.4",
     "swagger-tools": "^0.10.1",
     "yamljs": "^0.2.8"
   },
